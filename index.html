@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD PROJECT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container w-75">
+        <div class="text-danger text-center py-3 my-4 text-decoration-underline">
+            <h1>PRODUCT MANAGEMENT SYSTEM</h1>
+        </div>
+        <div class="form-grop">
+            <label for="ProductName" class="text-white fs-5">Product Name :</label>
+            <input onkeyup="validateProductName()" type="text" class="form-control my-2" id="ProductName" placeholder="Enter Product Name .....">
+        </div>
+        <div class="form-grop">
+            <label for="ProductPrice" class="text-white fs-5">Product Price :</label>
+            <input onkeyup="validateProductPrice()" type="number" class="form-control my-2" id="ProductPrice" placeholder="Enter Product Price .....">
+        </div>
+        <div class="form-grop">
+            <label for="productCategory" class="text-white fs-5">Product Category :</label>
+            <input onkeyup="validateproductCategory()" type="text" class="form-control my-2" id="productCategory"
+                placeholder="Enter Product Category .....">
+        </div>
+        <div class="form-grop">
+            <label for="productDesc" class="text-white fs-5">Product Description :</label>
+            <textarea onkeyup="validateproductDesc()" name="" id="productDesc" class="form-control my-2"
+                placeholder="Enter Product Description ....."></textarea>
+        </div>
+        <button onclick="addProduct()" id="addProductBtn" class="btn btn-secondary my-3">Add Product</button>
+        <button onclick="updatedProduct()" id="UpdateProductBtn" class="btn btn-warning my-3 d-none">Update</button>
+        <div class="form-grop w-50 mb-5 m-auto">
+            <label for="search" class="text-white fs-5"></label>
+            <input type="text" oninput="searchProduct(this.value)" class="form-control my-2" id="search" placeholder="Search .....">
+        </div>
+        <table class="table text-black text-center">
+            <thead class="fw-bold">
+                <tr>
+                    <td>Index</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Category</td>
+                    <td>Description</td>
+                    <td>Update</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody id="tbody" class="text-white">
+                
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
